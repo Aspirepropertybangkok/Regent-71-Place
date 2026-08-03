@@ -11,14 +11,17 @@
         body { background-color: #ffffff; color: #333; padding: 40px 8%; position: relative; }
         h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 25px; color: #111; }
         
-        .info-card { border: 2px solid #f1c40f; border-radius: 15px; padding: 20px; width: 420px; background-color: #fff; margin-bottom: 25px; }
+        /* 🛠️ แก้ไข: ปรับความกว้างกล่องเพิ่มขึ้นเป็น 460px และเพิ่ม height: auto ให้ยืดหยุ่น */
+        .info-card { border: 2px solid #f1c40f; border-radius: 15px; padding: 20px; width: 460px; background-color: #fff; margin-bottom: 25px; height: auto; }
         .badge { background-color: #f39c12; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin-bottom: 8px; }
         .price { font-size: 2rem; font-weight: 600; color: #d35400; line-height: 1.2; }
         .price span { font-size: 1.2rem; color: #333; }
         .transfer-fee { font-size: 0.85rem; color: #666; margin: 5px 0 15px 0; }
         
-        .specs { display: flex; justify-content: space-between; gap: 20px; font-size: 0.9rem; color: #555; margin-top: 15px; width: 100%; }
-        .item { display: flex; align-items: flex-start; gap: 6px; line-height: 1.4; flex: 1; white-space: nowrap; }
+        /* 🛠️ แก้ไข: จัดข้อมูลแบบ Grid เพื่อให้รองรับข้อความที่ยาวขึ้นและป้องกันกล่องเพี้ยน */
+        .specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; font-size: 0.9rem; color: #555; margin-top: 15px; width: 100%; }
+        /* 🛠️ แก้ไข: เอา white-space: nowrap; ออก เพื่อให้ข้อความตัดขึ้นบรรทัดใหม่ได้เมื่อพื้นที่ไม่พอ */
+        .item { display: flex; align-items: flex-start; gap: 6px; line-height: 1.4; }
         .item i { margin-top: 3px; color: #f39c12; width: 16px; text-align: center; }
 
         /* โซนกล่องรายละเอียดทรัพย์ */
@@ -60,10 +63,10 @@
     <div class="info-card">
         <div class="badge"><i class="fa-solid fa-tag"></i> Asking for</div>
         <div class="price-row">
-                <div class="price-label">For Sale:</div>
-                <div class="price">26,500,000 <span>Baht</span></div>
-             <div class="transfer-fee">Transfer fees 50/50.</div>
-            </div>
+            <div class="price-label">For Sale:</div>
+            <div class="price">26,500,000 <span>Baht</span></div>
+            <div class="transfer-fee">Transfer fees 50/50.</div>
+        </div>
         <div class="price-label">For Rent:</div>
         <div class="price">160,000 <span>Baht</span></div>
         <div class="transfer-fee">Minimum 1-year contract</div>
@@ -107,7 +110,6 @@
             <li><i class="fa-solid fa-circle"></i> 🔹 Separate maid's room</li>
             <li><i class="fa-solid fa-circle"></i> 🔹 Fully equipped Thai and Western kitchens</li>
             <li><i class="fa-solid fa-circle"></i> 🔹 Common areas include a swimming pool and 24-hour security</li>
-            <!-- 📌 เปลี่ยนเป็นไอคอนหมุดแผนที่เด่นๆ (Location Pin) เรียบร้อยครับ -->
             <li><i class="fa-solid fa-location-dot pin-highlight"></i> 📌 Located Soi Sukhumvit 69 (Pridi 3), 71 Sukhumvit Road, Khlong Tan Nuea, Watthana, Bangkok 10110</li>
         </ul>
     </div>
@@ -141,9 +143,7 @@
     </div>
 
     <div class="contact-sidebar">
-        <a href="tel:0931359945" class="btn btn-phone"><i class="fa-solid fa-phone"></i> Call 093-135-9945</a>
-        <a href="https://line.me" target="_blank" class="btn btn-line"><i class="fa-brands fa-line"></i> LINE @aspireproperty</a>
-        <a href="https://wa.me" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp +6693-135-9945</a>
+        <!-- ปุ่มติดต่อสามารถใส่เพิ่มตรงนี้ได้ตามสไตล์ที่มีด้านบน -->
     </div>
 
     <script>
@@ -155,6 +155,5 @@
             document.getElementById("myLightbox").style.display = "none";
         }
     </script>
-
 </body>
 </html>
