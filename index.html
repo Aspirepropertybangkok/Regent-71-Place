@@ -11,18 +11,17 @@
         body { background-color: #ffffff; color: #333; padding: 40px 8%; position: relative; }
         h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 25px; color: #111; }
         
-        /* 🛠️ แก้ไข: ปรับความกว้างกล่องเพิ่มขึ้นเป็น 460px และเพิ่ม height: auto ให้ยืดหยุ่น */
-        .info-card { border: 2px solid #f1c40f; border-radius: 15px; padding: 20px; width: 460px; background-color: #fff; margin-bottom: 25px; height: auto; }
+        /* 🛠️ แก้ไข: ขยายความกว้างกล่องเพิ่มเป็น 480px เพื่อให้ข้อความรถไฟฟ้ายาวๆ อยู่ในกล่องได้พอดี */
+        .info-card { border: 2px solid #f1c40f; border-radius: 15px; padding: 20px; width: 480px; background-color: #fff; margin-bottom: 25px; height: auto; }
         .badge { background-color: #f39c12; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin-bottom: 8px; }
         .price { font-size: 2rem; font-weight: 600; color: #d35400; line-height: 1.2; }
         .price span { font-size: 1.2rem; color: #333; }
         .transfer-fee { font-size: 0.85rem; color: #666; margin: 5px 0 15px 0; }
         
-        /* 🛠️ แก้ไข: จัดข้อมูลแบบ Grid เพื่อให้รองรับข้อความที่ยาวขึ้นและป้องกันกล่องเพี้ยน */
-        .specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; font-size: 0.9rem; color: #555; margin-top: 15px; width: 100%; }
-        /* 🛠️ แก้ไข: เอา white-space: nowrap; ออก เพื่อให้ข้อความตัดขึ้นบรรทัดใหม่ได้เมื่อพื้นที่ไม่พอ */
+        /* 🛠️ แก้ไข: จัดข้อมูลแบบ Grid 2 คอลัมน์ เพื่อสลับตําแหน่งข้อความขึ้นมาด้านบนขวา */
+        .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 20px; font-size: 0.9rem; color: #555; margin-top: 15px; width: 100%; }
         .item { display: flex; align-items: flex-start; gap: 6px; line-height: 1.4; }
-        .item i { margin-top: 3px; color: #f39c12; width: 16px; text-align: center; }
+        .item i { margin-top: 3px; color: #f39c12; width: 16px; text-align: center; flex-shrink: 0; }
 
         /* โซนกล่องรายละเอียดทรัพย์ */
         .property-description { max-width: 650px; margin-bottom: 35px; line-height: 1.6; color: #334155; font-size: 1rem; }
@@ -34,7 +33,7 @@
         /* สไตล์ไอคอนทั่วไป */
         .property-description li i { color: #f39c12; margin-top: 5px; font-size: 0.85rem; width: 16px; text-align: center; }
         
-        /* 🛠️ สไตล์พิเศษสำหรับหมุดแผนที่สีส้มแดงเด่นๆ */
+        /* สไตล์พิเศษสำหรับหมุดแผนที่สีส้มแดงเด่นๆ */
         .property-description li i.pin-highlight { color: #e74c3c; font-size: 1.1rem; margin-top: 3px; }
 
         /* แกลเลอรีรูปภาพ */
@@ -71,14 +70,9 @@
         <div class="price">160,000 <span>Baht</span></div>
         <div class="transfer-fee">Minimum 1-year contract</div>
         
-            <div class="specs">
-            <div class="item">
-                <i class="fa-solid fa-vector-square"></i>
-                <div>
-                    87.5 Sq.wa.<br>
-                    350 Sq.m.
-                </div>
-            </div>
+        <!-- 🛠️ แก้ไข: รวมกลุ่มข้อมูลไอเทมทั้งหมดไว้ใน .specs เพื่อจัดเรียงหน้าตาแบบ 2 คอลัมน์ที่สวยงาม -->
+        <div class="specs">
+            <!-- คอลัมน์ที่ 1 บน: ห้องนอนห้องน้ำ -->
             <div class="item">
                 <i class="fa-solid fa-bed"></i>
                 <div>
@@ -87,18 +81,25 @@
                 </div>
             </div>
             
-        </div>
-
-                <div class="item">
+            <!-- คอลัมน์ที่ 2 บน: ขยับสถานีรถไฟฟ้าขึ้นมาด้านขวาเคียงข้างเรียบร้อยแล้ว -->
+            <div class="item">
                 <i class="fa-solid fa-train-subway"></i>
                 <div>
                     BTS Phra Khanong <br>
                     Near Summer Hill & W District
                 </div>
             </div>
+
+            <!-- คอลัมน์ที่ 1 ล่าง: ขนาดพื้นที่ดินและพื้นที่ใช้สอย -->
+            <div class="item">
+                <i class="fa-solid fa-vector-square"></i>
+                <div>
+                    87.5 Sq.wa.<br>
+                    350 Sq.m.
+                </div>
+            </div>
         </div>
     </div>
-
 
     <!-- โซนรายละเอียดทรัพย์ -->
     <div class="property-description">
