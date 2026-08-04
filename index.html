@@ -59,13 +59,59 @@
     <h1>[For Rent&Sale] 3-Storey Townhome in Sukhumvit 71, Only 290 m. from BTS Phra Khanong</h1>
 
     <div class="info-card">
-        <div class="badge"><i class="fa-solid fa-tag"></i> Asking for</div>
+        <div class="badge"><i class="fa-solid fa-tag"></i> Asking </div>
         <div class="price-row">
-                <div class="price-label">For Sale:</div>
+                <div class="price-label sale">For Sale:</div>
                 <div class="price">26,500,000 <span>Baht</span></div>
              <div class="transfer-fee">Transfer fees 50/50.</div>
             </div>
-        <div class="price-label">For Rent:</div>
+        .info-card {
+    border: 2px solid #f1c40f;
+    border-radius: 15px;
+    padding: 20px;
+    width: 420px;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+
+.badge {
+    background-color: #f39c12;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #d35400;
+}
+
+.transfer-fee {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 5px 0 15px 0;
+}
+
+/* เพิ่มตรงนี้ */
+.price-label{
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 10px 0 8px;
+}
+
+.price-label.sale{
+    background: #d32f2f;
+}
+
+.price-label.rent{
+    background: #2e7d32;
+}
+        <div class="price-label rent">For Rent:</div>
         <div class="price">160,000 <span>Baht</span></div>
         <div class="transfer-fee">Minimum 1-year contract</div>
         
