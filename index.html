@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[For Rent&Sale] 3-Storey Townhome in Sukhumvit 71</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         * { box-sizing: border-box; font-family: 'Kanit', sans-serif; margin: 0; padding: 0; }
         body { background-color: #ffffff; color: #333; padding: 40px 8%; position: relative; }
         h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 25px; color: #111; }
         
-        /* 🛠️ แก้ไข: ขยายความกว้างกล่องเพิ่มเป็น 480px เพื่อให้ข้อความรถไฟฟ้ายาวๆ อยู่ในกล่องได้พอดี */
-        .info-card { border: 2px solid #f1c40f; border-radius: 15px; padding: 20px; width: 480px; background-color: #fff; margin-bottom: 25px; height: auto; }
+        .info-card { border: 2px solid #f1c40f; border-radius: 15px; padding: 20px; width: 420px; background-color: #fff; margin-bottom: 25px; }
         .badge { background-color: #f39c12; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin-bottom: 8px; }
         .price { font-size: 2rem; font-weight: 600; color: #d35400; line-height: 1.2; }
         .price span { font-size: 1.2rem; color: #333; }
         .transfer-fee { font-size: 0.85rem; color: #666; margin: 5px 0 15px 0; }
         
-        /* 🛠️ แก้ไข: จัดข้อมูลแบบ Grid 2 คอลัมน์ เพื่อสลับตําแหน่งข้อความขึ้นมาด้านบนขวา */
-        .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 20px; font-size: 0.9rem; color: #555; margin-top: 15px; width: 100%; }
-        .item { display: flex; align-items: flex-start; gap: 6px; line-height: 1.4; }
-        .item i { margin-top: 3px; color: #f39c12; width: 16px; text-align: center; flex-shrink: 0; }
+        .specs { display: flex; justify-content: space-between; gap: 20px; font-size: 0.9rem; color: #555; margin-top: 15px; width: 100%; }
+        .item { display: flex; align-items: flex-start; gap: 6px; line-height: 1.4; flex: 1; white-space: nowrap; }
+        .item i { margin-top: 3px; color: #f39c12; width: 16px; text-align: center; }
 
         /* โซนกล่องรายละเอียดทรัพย์ */
         .property-description { max-width: 650px; margin-bottom: 35px; line-height: 1.6; color: #334155; font-size: 1rem; }
@@ -37,8 +31,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         /* สไตล์ไอคอนทั่วไป */
         .property-description li i { color: #f39c12; margin-top: 5px; font-size: 0.85rem; width: 16px; text-align: center; }
         
-        /* สไตล์พิเศษสำหรับหมุดแผนที่สีส้มแดงเด่นๆ */
+        /* 🛠️ สไตล์พิเศษสำหรับหมุดแผนที่สีส้มแดงเด่นๆ */
         .property-description li i.pin-highlight { color: #e74c3c; font-size: 1.1rem; margin-top: 3px; }
+
 
         /* แกลเลอรีรูปภาพ */
         .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; margin-bottom: 120px; clear: both; }
